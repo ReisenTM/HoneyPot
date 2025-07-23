@@ -38,9 +38,9 @@ func InitDB() (db *gorm.DB) {
 	if cfg.ConnMaxLifetime == 0 {
 		cfg.ConnMaxLifetime = 10000
 	}
-	logrus.Infof("最大空闲数 %d", cfg.MaxIdleConns)
-	logrus.Infof("最大连接数 %d", cfg.MaxOpenConns)
-	logrus.Infof("超时时间 %s", time.Duration(cfg.ConnMaxLifetime)*time.Second)
+	//logrus.Infof("最大空闲数 %d", cfg.MaxIdleConns)
+	//logrus.Infof("最大连接数 %d", cfg.MaxOpenConns)
+	//logrus.Infof("超时时间 %s", time.Duration(cfg.ConnMaxLifetime)*time.Second)
 	sqlDB.SetMaxIdleConns(cfg.MaxIdleConns)
 	sqlDB.SetMaxOpenConns(cfg.MaxOpenConns)
 	sqlDB.SetConnMaxLifetime(time.Duration(cfg.ConnMaxLifetime) * time.Second)
