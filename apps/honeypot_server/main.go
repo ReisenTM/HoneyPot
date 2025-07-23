@@ -7,7 +7,10 @@ import (
 )
 
 func main() {
+
 	global.Config = core.InitConfig()
 	global.DB = core.InitDB()
+	core.SetLogDefault() //方便本地调试
+	global.Log = core.GetLogger()
 	flags.Run()
 }

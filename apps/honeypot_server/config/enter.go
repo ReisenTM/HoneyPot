@@ -3,8 +3,8 @@ package config
 import "fmt"
 
 type Config struct {
-	DB DB `yaml:"db"`
-	//Logger    Logger   `yaml:"logger"`
+	DB     DB     `yaml:"db"`
+	Logger Logger `yaml:"logger"`
 	//Redis     Redis    `yaml:"redis"`
 	//System    System   `yaml:"system"`
 	//Jwt       Jwt      `yaml:"jwt"`
@@ -12,6 +12,7 @@ type Config struct {
 	//MQ        MQ       `yaml:"mq"`
 }
 
+// DB 数据库设置
 type DB struct {
 	DbName          string `yaml:"db_name"`
 	Host            string `yaml:"host"`
@@ -33,13 +34,13 @@ func (cfg DB) Dsn() string {
 	)
 }
 
-//
-//type Logger struct {
-//	Format  string `yaml:"format"`
-//	Level   string `yaml:"level"`
-//	AppName string `yaml:"appName"`
-//}
-//
+// Logger 日志输出格式设置
+type Logger struct {
+	Format  string `yaml:"format"`
+	Level   string `yaml:"level"`
+	AppName string `yaml:"appName"`
+}
+
 //type Redis struct {
 //	Addr     string
 //	Password string

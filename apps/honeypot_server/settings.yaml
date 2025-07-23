@@ -7,10 +7,10 @@ db:
   maxIdleConns: 10
   maxOpenConns: 100
   connMaxLifetime: 10000
-#logger:
-#  format: json
-#  appName: honey_server
-#  level: info
+logger:
+  format: json
+  appName: honey_server
+  level: info
 #redis:
 #  addr: 192.168.80.1:6379
 #  password:

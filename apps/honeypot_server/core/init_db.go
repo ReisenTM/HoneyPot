@@ -44,6 +44,6 @@ func InitDB() (db *gorm.DB) {
 	sqlDB.SetMaxIdleConns(cfg.MaxIdleConns)
 	sqlDB.SetMaxOpenConns(cfg.MaxOpenConns)
 	sqlDB.SetConnMaxLifetime(time.Duration(cfg.ConnMaxLifetime) * time.Second)
-	logrus.Infof("数据库连接成功")
+	logrus.Infof("数据库连接成功\n")
 	return
 }
