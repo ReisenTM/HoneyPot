@@ -9,7 +9,7 @@ type TrapPortModel struct {
 	NetID        uint         `json:"net_id"`
 	NetModel     NetModel     `gorm:"foreignKey:NetID" json:"-"`
 	TrapIPID     uint         `json:"trap_ip_id"`
-	HoneyIpModel TrapIPModel  `gorm:"foreignKey:HoneyIpID" json:"-"`
+	TrapIPModel  TrapIPModel  `gorm:"foreignKey:TrapIPID" json:"-"`
 	ServiceID    uint         `json:"service_id"` // 服务id
 	ServiceModel ServiceModel `gorm:"foreignKey:ServiceID" json:"-"`
 	Port         int          `json:"port"`                  // 服务的端口
