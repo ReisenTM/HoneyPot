@@ -7,7 +7,7 @@ type Config struct {
 	Logger Logger `yaml:"logger"`
 	Redis  Redis  `yaml:"redis"`
 	System System `yaml:"system"`
-	//Jwt       Jwt      `yaml:"jwt"`
+	Jwt    Jwt    `yaml:"jwt"`
 	//WhiteList []string `yaml:"whiteList"`
 	//MQ        MQ       `yaml:"mq"`
 }
@@ -54,11 +54,12 @@ type System struct {
 	Mode string `yaml:"mode"`
 }
 
-//type Jwt struct {
-//	Expires int    `yaml:"expires"` // 单位为秒
-//	Issuer  string `yaml:"issuer"`
-//	Secret  string `yaml:"secret"`
-//}
+type Jwt struct {
+	Expires int    `yaml:"expires"` // 单位为秒
+	Issuer  string `yaml:"issuer"`
+	Secret  string `yaml:"secret"`
+}
+
 //
 //type MQ struct {
 //	User                 string `yaml:"user"`

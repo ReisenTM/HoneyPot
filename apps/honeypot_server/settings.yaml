@@ -19,10 +19,10 @@ system:
   mode: release # debug
   webAddr: ":8079" # web的运行地址
 #  grpcAddr: ":8081"
-#jwt:
-#  expires: 8640000
-#  issuer: fengfeng
-#  secret: kdfjf6
+jwt:
+  expires: 8640000
+  issuer: reisen
+  secret: kfcvme50
 #whiteList:
 #  - /honey_server/login
 #  - /honey_server/captcha
