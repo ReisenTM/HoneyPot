@@ -5,6 +5,7 @@ import (
 	"github.com/sirupsen/logrus"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"sync"
 	"time"
 )
 
@@ -38,12 +39,21 @@ func InitDB() (db *gorm.DB) {
 	if cfg.ConnMaxLifetime == 0 {
 		cfg.ConnMaxLifetime = 10000
 	}
-	//logrus.Infof("最大空闲数 %d", cfg.MaxIdleConns)
-	//logrus.Infof("最大连接数 %d", cfg.MaxOpenConns)
-	//logrus.Infof("超时时间 %s", time.Duration(cfg.ConnMaxLifetime)*time.Second)
+
 	sqlDB.SetMaxIdleConns(cfg.MaxIdleConns)
 	sqlDB.SetMaxOpenConns(cfg.MaxOpenConns)
 	sqlDB.SetConnMaxLifetime(time.Duration(cfg.ConnMaxLifetime) * time.Second)
 	logrus.Infof("数据库连接成功\n")
 	return
+}
+
+var db *gorm.DB
+var once sync.Once
+
+// GetDB 单例模式:如果有就返回之前创建的，没有就创建
+func GetDB() *gorm.DB {
+	once.Do(func() {
+		db = InitDB()
+	})
+	return db
 }
