@@ -5,8 +5,8 @@ import "fmt"
 type Config struct {
 	DB     DB     `yaml:"db"`
 	Logger Logger `yaml:"logger"`
-	//Redis     Redis    `yaml:"redis"`
-	//System    System   `yaml:"system"`
+	Redis  Redis  `yaml:"redis"`
+	System System `yaml:"system"`
 	//Jwt       Jwt      `yaml:"jwt"`
 	//WhiteList []string `yaml:"whiteList"`
 	//MQ        MQ       `yaml:"mq"`
@@ -41,18 +41,19 @@ type Logger struct {
 	AppName string `yaml:"appName"`
 }
 
-//type Redis struct {
-//	Addr     string
-//	Password string
-//	DB       int
-//}
-//
-//type System struct {
-//	WebAddr  string `yaml:"webAddr"`
-//	GrpcAddr string `yaml:"grpcAddr"`
-//	Mode     string `yaml:"mode"`
-//}
-//
+// Redis  配置
+type Redis struct {
+	Addr     string
+	Password string
+	DB       int
+}
+
+type System struct {
+	WebAddr string `yaml:"webAddr"`
+	//GrpcAddr string `yaml:"grpcAddr"`
+	Mode string `yaml:"mode"`
+}
+
 //type Jwt struct {
 //	Expires int    `yaml:"expires"` // 单位为秒
 //	Issuer  string `yaml:"issuer"`

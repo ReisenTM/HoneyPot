@@ -8,7 +8,7 @@ import (
 	"os"
 )
 
-func InitConfig() *config.Config {
+func ReadConfig() *config.Config {
 	byteData, err := os.ReadFile(flags.Options.File)
 	if err != nil {
 		logrus.Fatalf("配置文件读取错误 %s", err)
@@ -20,6 +20,5 @@ func InitConfig() *config.Config {
 		logrus.Fatalf("配置文件配置错误 %s", err)
 		return nil
 	}
-	logrus.Infoln("配置文件初始化完毕\n")
 	return c
 }

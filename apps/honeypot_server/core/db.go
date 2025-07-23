@@ -48,11 +48,11 @@ func InitDB() (db *gorm.DB) {
 }
 
 var db *gorm.DB
-var once sync.Once
+var onceDb sync.Once
 
 // GetDB 单例模式:如果有就返回之前创建的，没有就创建
 func GetDB() *gorm.DB {
-	once.Do(func() {
+	onceDb.Do(func() {
 		db = InitDB()
 	})
 	return db

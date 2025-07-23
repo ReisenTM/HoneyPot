@@ -9,15 +9,15 @@ db:
   connMaxLifetime: 10000
 logger:
   format: json
-  appName: honey_server
+  appName: honeypot_server
   level: info
-#redis:
-#  addr: 192.168.80.1:6379
-#  password:
-#  db: 1
-#system:
-#  mode: debug # debug
-#  webAddr: ":8079" # web的运行地址
+redis:
+  addr: 10.211.55.4:6379
+  password:
+  db: 1
+system:
+  mode: release # debug
+  webAddr: ":8079" # web的运行地址
 #  grpcAddr: ":8081"
 #jwt:
 #  expires: 8640000
