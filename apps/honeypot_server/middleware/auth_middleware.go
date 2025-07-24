@@ -51,3 +51,7 @@ func AdminMiddleware(c *gin.Context) {
 	c.Set("claims", claims)
 	return
 }
+
+func GetAuth(c *gin.Context) *jwts.MyClaims {
+	return c.MustGet("claims").(*jwts.MyClaims)
+}
