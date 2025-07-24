@@ -9,5 +9,8 @@ import (
 
 func UserRouter(r *gin.RouterGroup) {
 	app := api.App.UserApi
+	//登录
 	r.POST("login", middleware.BindJsonMiddleware[user_api.UserLoginRequest], app.UserLoginView)
+	//注册
+	r.POST("register", middleware.BindJsonMiddleware[user_api.UserRegisterRequest], app.UserRegisterView)
 }

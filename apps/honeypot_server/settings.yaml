@@ -27,6 +27,7 @@ whiteList:
   - /honeypot_server/login
   - /honeypot_server/captcha
   - /honeypot_server/site
+  - /honeypot_server/register
 #mq:
 #  user: admin
 #  password: password

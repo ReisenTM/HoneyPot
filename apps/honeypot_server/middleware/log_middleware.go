@@ -1,7 +1,6 @@
 package middleware
 
 import (
-	""
 	"Honeypot/apps/honeypot_server/global"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"

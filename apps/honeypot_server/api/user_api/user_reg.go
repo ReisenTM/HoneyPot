@@ -12,7 +12,7 @@ import (
 type UserRegisterRequest struct {
 	Username string    `json:"username" binding:"required"`
 	Password string    `json:"password" binding:"required" label:"密码"`
-	Role     enum.Role `json:"role" binding:"required,ne=1"` //ne = not equal
+	Role     enum.Role `json:"role" binding:"required,ne=2"` //ne = not equal
 }
 
 func (UserApi) UserRegisterView(c *gin.Context) {
