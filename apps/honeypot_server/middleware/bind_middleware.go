@@ -1,12 +1,15 @@
 package middleware
 
-import "github.com/gin-gonic/gin"
+import (
+	"Honeypot/apps/honeypot_server/utils/resp"
+	"github.com/gin-gonic/gin"
+)
 
 func BindJsonMiddleware[T any](c *gin.Context) {
 	var cr T
 	err := c.ShouldBindJSON(&cr)
 	if err != nil {
-		res.FailWithError(err, c)
+		resp.FailWithError(err, c)
 		c.Abort()
 		return
 	}
@@ -17,7 +20,7 @@ func BindQueryMiddleware[T any](c *gin.Context) {
 	var cr T
 	err := c.ShouldBindQuery(&cr)
 	if err != nil {
-		res.FailWithError(err, c)
+		resp.FailWithError(err, c)
 		c.Abort()
 		return
 	}
@@ -28,7 +31,7 @@ func BindUriMiddleware[T any](c *gin.Context) {
 	var cr T
 	err := c.ShouldBindUri(&cr)
 	if err != nil {
-		res.FailWithError(err, c)
+		resp.FailWithError(err, c)
 		c.Abort()
 		return
 	}
