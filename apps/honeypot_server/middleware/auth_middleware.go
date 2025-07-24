@@ -2,26 +2,30 @@
 package middleware
 
 import (
+	"Honeypot/apps/honeypot_server/enum"
+	"Honeypot/apps/honeypot_server/global"
 	"Honeypot/apps/honeypot_server/utils/jwts"
+	"Honeypot/apps/honeypot_server/utils/resp"
+	"Honeypot/apps/honeypot_server/utils/white_list"
 	"github.com/gin-gonic/gin"
 )
 
 // AuthMiddleware 权限验证
 func AuthMiddleware(c *gin.Context) {
-
+	// 去判断这个路径在不在白名单中
+	path := c.Request.URL.Path
+	if white_list.WhiteListCheck(global.Config.WhiteList, path) {
+		// 在白名单中，直接放行
+		c.Next()
+		return
+	}
 	claims, err := jwts.ParseTokenByGin(c)
 	if err != nil {
 		resp.FailWithError(err, c)
 		c.Abort()
 		return
 	}
-	//确认用户不在黑名单
-	blcType, ok := redis_jwt.HasTokenBlackByGin(c)
-	if ok {
-		resp.FailWithMsg(blcType.Msg(), c)
-		c.Abort()
-		return
-	}
+
 	//保存验证过的用户信息
 	c.Set("claims", claims)
 	return
@@ -37,16 +41,9 @@ func AdminMiddleware(c *gin.Context) {
 		return
 	}
 
-	if claims.Role != enum.RoleAdminType {
+	if claims.Role != enum.RoleAdmin {
 		//不是管理员
 		resp.FailWithMsg("权限错误", c)
-		c.Abort()
-		return
-	}
-	//确认用户不在黑名单
-	blcType, ok := redis_jwt.HasTokenBlackByGin(c)
-	if ok {
-		resp.FailWithMsg(blcType.Msg(), c)
 		c.Abort()
 		return
 	}

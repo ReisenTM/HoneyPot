@@ -23,10 +23,10 @@ jwt:
   expires: 8640000
   issuer: reisen
   secret: kfcvme50
-#whiteList:
-#  - /honey_server/login
-#  - /honey_server/captcha
-#  - /honey_server/site
+whiteList:
+  - /honey_server/login
+  - /honey_server/captcha
+  - /honey_server/site
 #mq:
 #  user: admin
 #  password: password

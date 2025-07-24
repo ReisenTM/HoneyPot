@@ -2,6 +2,7 @@ package routers
 
 import (
 	"Honeypot/apps/honeypot_server/global"
+	"Honeypot/apps/honeypot_server/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
@@ -14,7 +15,7 @@ func Run() {
 	//静态路由,资源映射
 	r.Static("uploads", "./uploads")
 	g := r.Group("honeypot_server")
-	g.Use()
+	g.Use(middleware.AuthMiddleware) //需要放行的使用白名单机制
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)
 }
