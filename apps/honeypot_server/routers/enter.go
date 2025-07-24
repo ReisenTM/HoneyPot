@@ -15,7 +15,11 @@ func Run() {
 	//静态路由,资源映射
 	r.Static("uploads", "./uploads")
 	g := r.Group("honeypot_server")
-	g.Use(middleware.AuthMiddleware) //需要放行的使用白名单机制
+	g.Use(middleware.LogMiddleware, middleware.AuthMiddleware) //需要放行的使用白名单机制
+
+	CaptchaRouter(g)
+	UserRouter(g)
+
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)
 }

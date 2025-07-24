@@ -24,9 +24,9 @@ jwt:
   issuer: reisen
   secret: kfcvme50
 whiteList:
-  - /honey_server/login
-  - /honey_server/captcha
-  - /honey_server/site
+  - /honeypot_server/login
+  - /honeypot_server/captcha
+  - /honeypot_server/site
 #mq:
 #  user: admin
 #  password: password
