@@ -2,7 +2,6 @@ package jwts
 
 import (
 	"Honeypot/apps/honeypot_server/global"
-	"Honeypot/apps/honeypot_server/global/enum"
 	"Honeypot/apps/honeypot_server/models"
 	"errors"
 	"github.com/dgrijalva/jwt-go"
@@ -12,8 +11,8 @@ import (
 )
 
 type Claims struct {
-	UserID uint          `json:"userID"`
-	Role   enum.RoleType `json:"role"`
+	UserID uint `json:"userID"`
+	Role   int8 `json:"role"`
 }
 
 type MyClaims struct {
