@@ -23,7 +23,7 @@ func (User) Create(value string) {
 			return
 		}
 	} else {
-		fmt.Println("请选择角色： 1 管理员 2 普通用户")
+		fmt.Println("请选择角色：1 普通用户 2 管理员 ")
 		_, err := fmt.Scanln(&userInfo.Role)
 		if err != nil {
 			fmt.Println("输入错误", err)

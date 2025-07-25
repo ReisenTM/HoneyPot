@@ -19,6 +19,7 @@ func Run() {
 
 	CaptchaRouter(g)
 	UserRouter(g)
+	LogRouter(g)
 
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)

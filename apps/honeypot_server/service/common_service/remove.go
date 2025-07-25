@@ -12,7 +12,7 @@ type RemoveOption struct {
 	IDList   []uint
 	Log      *logrus.Entry
 	Msg      string
-	Unscoped bool
+	Unscoped bool //是否启用真删除
 }
 
 func Remove[T any](model T, req RemoveOption) (successCount int64, err error) {
@@ -22,7 +22,7 @@ func Remove[T any](model T, req RemoveOption) (successCount int64, err error) {
 		db = db.Debug()
 		deleteDB = deleteDB.Debug()
 	}
-	
+
 	if req.Unscoped {
 		req.Log.Infof("启用真删除")
 		deleteDB = deleteDB.Unscoped()
