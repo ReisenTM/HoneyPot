@@ -1,0 +1,42 @@
+db:
+  db_name: "honeypot_db"
+  host: "10.211.55.4"
+  port: 3306
+  user: "root"
+  password: "123456"
+  maxIdleConns: 10
+  maxOpenConns: 100
+  connMaxLifetime: 10000
+logger:
+  format: json
+  appName: honeypot_server
+  level: info
+redis:
+  addr: 10.211.55.4:6379
+  password:
+  db: 1
+system:
+  mode: release # debug
+  webAddr: ":8079" # web的运行地址
+#  grpcAddr: ":8081"
+jwt:
+  expires: 8640000
+  issuer: reisen
+  secret: kfcvme50
+whiteList:
+  - /honeypot_server/login
+  - /honeypot_server/captcha
+  - /honeypot_server/site
+  - /honeypot_server/register
+#mq:
+#  user: admin
+#  password: password
+#  host: 10.3.0.8
+#  port: 5672
+#  createIpExchangeName: createIpExchange
+#  deleteIpExchangeName: deleteIpExchangeName
+#  bindPortExchangeName: bindPortExchangeName
+#  ssl: false
+#  clientCertificate: # 客户端的证书
+#  clientKey:  # 客户端的私钥
+#  caCertificate:  # ca的证书
