@@ -50,7 +50,7 @@ func OkWithData(data any, c *gin.Context) {
 	resp := Response{SuccessCode, data, "成功"}
 	resp.Json(c)
 }
-func OkWithList(list any, count int, c *gin.Context) {
+func OkWithList(list any, count int64, c *gin.Context) {
 	resp := Response{SuccessCode, map[string]any{
 		"list":  list,
 		"count": count,

@@ -9,6 +9,7 @@ import (
 
 func main() {
 	global.Config = core.ReadConfig()
+	core.InitIPDB()
 	core.SetLogDefault() //方便本地调试
 	global.DB = core.GetDB()
 	global.Redis = core.GetRedis()
