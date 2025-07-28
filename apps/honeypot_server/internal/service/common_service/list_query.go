@@ -2,7 +2,7 @@ package common_service
 
 import (
 	"Honeypot/apps/honeypot_server/internal/core"
-	"Honeypot/apps/honeypot_server/models"
+	"Honeypot/apps/honeypot_server/internal/models"
 	"fmt"
 	"gorm.io/gorm"
 )

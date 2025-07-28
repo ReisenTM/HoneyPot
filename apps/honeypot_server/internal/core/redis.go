@@ -1,7 +1,7 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/global"
+	"Honeypot/apps/honeypot_server/internal/global"
 	"context"
 	"github.com/redis/go-redis/v9"
 	"github.com/sirupsen/logrus"

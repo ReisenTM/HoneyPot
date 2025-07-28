@@ -1,8 +1,8 @@
 package captcha_api
 
 import (
-	"Honeypot/apps/honeypot_server/utils/captcha"
-	"Honeypot/apps/honeypot_server/utils/resp"
+	"Honeypot/apps/honeypot_server/internal/utils/captcha"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
 	"github.com/mojocn/base64Captcha"
 	"github.com/sirupsen/logrus"

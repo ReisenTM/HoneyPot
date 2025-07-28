@@ -1,11 +1,11 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/enum"
-	"Honeypot/apps/honeypot_server/global"
-	"Honeypot/apps/honeypot_server/middleware"
-	"Honeypot/apps/honeypot_server/models"
-	"Honeypot/apps/honeypot_server/utils/resp"
+	"Honeypot/apps/honeypot_server/internal/enum"
+	"Honeypot/apps/honeypot_server/internal/global"
+	"Honeypot/apps/honeypot_server/internal/middleware"
+	"Honeypot/apps/honeypot_server/internal/models"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
 )
 

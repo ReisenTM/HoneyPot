@@ -1,9 +1,9 @@
 package flags
 
 import (
-	"Honeypot/apps/honeypot_server/global"
-	"Honeypot/apps/honeypot_server/models"
-	"Honeypot/apps/honeypot_server/service/user_service"
+	"Honeypot/apps/honeypot_server/internal/global"
+	"Honeypot/apps/honeypot_server/internal/models"
+	user_service2 "Honeypot/apps/honeypot_server/internal/service/user_service"
 	"encoding/json"
 	"fmt"
 	"github.com/sirupsen/logrus"
@@ -15,7 +15,7 @@ type User struct {
 }
 
 func (User) Create(value string) {
-	var userInfo user_service.UserCreateRequest
+	var userInfo user_service2.UserCreateRequest
 	if value != "" {
 		err := json.Unmarshal([]byte(value), &userInfo)
 		if err != nil {
@@ -55,7 +55,7 @@ func (User) Create(value string) {
 		userInfo.Password = string(password)
 	}
 
-	us := user_service.NewUserService(global.Log)
+	us := user_service2.NewUserService(global.Log)
 	_, err := us.Create(userInfo)
 	if err != nil {
 		logrus.Fatal(err)

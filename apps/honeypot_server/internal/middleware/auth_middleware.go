@@ -4,10 +4,9 @@ package middleware
 import (
 	"Honeypot/apps/honeypot_server/internal/enum"
 	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/utils/jwts"
-	"Honeypot/apps/honeypot_server/utils/resp"
-	"Honeypot/apps/honeypot_server/utils/white_list"
-	"fmt"
+	"Honeypot/apps/honeypot_server/internal/utils/jwts"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
+	"Honeypot/apps/honeypot_server/internal/utils/white_list"
 	"github.com/gin-gonic/gin"
 )
 
@@ -15,8 +14,7 @@ import (
 func AuthMiddleware(c *gin.Context) {
 	// 去判断这个路径在不在白名单中
 	path := c.Request.URL.Path
-	fmt.Println("white_list:", global.Config.WhiteList)
-	fmt.Println("path:", path)
+
 	if white_list.WhiteListCheck(global.Config.WhiteList, path) {
 		// 在白名单中，直接放行
 		c.Next()

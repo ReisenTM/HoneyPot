@@ -1,7 +1,7 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/global"
+	"Honeypot/apps/honeypot_server/internal/global"
 	"bytes"
 	"fmt"
 	"github.com/sirupsen/logrus"

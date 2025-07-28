@@ -1,10 +1,10 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/enum"
-	"Honeypot/apps/honeypot_server/middleware"
-	"Honeypot/apps/honeypot_server/service/user_service"
-	"Honeypot/apps/honeypot_server/utils/resp"
+	"Honeypot/apps/honeypot_server/internal/enum"
+	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
+	user_service2 "Honeypot/apps/honeypot_server/internal/service/user_service"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
@@ -16,11 +16,11 @@ type UserRegisterRequest struct {
 }
 
 func (UserApi) UserRegisterView(c *gin.Context) {
-	cr := middleware.GetBind[UserRegisterRequest](c)
+	cr := middleware2.GetBind[UserRegisterRequest](c)
 
-	log := middleware.GetLog(c)
-	us := user_service.NewUserService(log)
-	user, err := us.Create(user_service.UserCreateRequest{
+	log := middleware2.GetLog(c)
+	us := user_service2.NewUserService(log)
+	user, err := us.Create(user_service2.UserCreateRequest{
 		Username: cr.Username,
 		Password: cr.Password,
 		Role:     cr.Role,

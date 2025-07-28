@@ -1,8 +1,8 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/config"
-	"Honeypot/apps/honeypot_server/flags"
+	"Honeypot/apps/honeypot_server/internal/config"
+	"Honeypot/apps/honeypot_server/internal/flags"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 	"os"

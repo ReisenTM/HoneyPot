@@ -23,5 +23,5 @@ type IDListRequest struct {
 }
 
 type IDRequest struct {
-	Id uint `json:"id" uri:"id" form:"id"`
+	ID uint `json:"id" uri:"id" form:"id"`
 }

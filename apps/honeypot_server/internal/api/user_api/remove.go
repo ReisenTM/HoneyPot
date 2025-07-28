@@ -1,10 +1,10 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/middleware"
-	"Honeypot/apps/honeypot_server/models"
-	"Honeypot/apps/honeypot_server/service/common_service"
-	"Honeypot/apps/honeypot_server/utils/resp"
+	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
+	"Honeypot/apps/honeypot_server/internal/models"
+	"Honeypot/apps/honeypot_server/internal/service/common_service"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
 )
@@ -14,8 +14,8 @@ type UserRemoveRequest struct {
 }
 
 func (UserApi) UserRemoveView(c *gin.Context) {
-	cr := middleware.GetBind[UserRemoveRequest](c)
-	log := middleware.GetLog(c)
+	cr := middleware2.GetBind[UserRemoveRequest](c)
+	log := middleware2.GetLog(c)
 	successCount, err := common_service.Remove(models.UserModel{}, common_service.RemoveOption{
 		IDList: cr.IDList,
 		Log:    log,

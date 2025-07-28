@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"Honeypot/apps/honeypot_server/utils/resp"
+	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
 )
 

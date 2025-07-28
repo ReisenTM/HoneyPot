@@ -3,8 +3,8 @@ package user_service
 import (
 	"Honeypot/apps/honeypot_server/internal/enum"
 	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/models"
-	"Honeypot/apps/honeypot_server/utils/pwd"
+	"Honeypot/apps/honeypot_server/internal/models"
+	"Honeypot/apps/honeypot_server/internal/utils/pwd"
 	"fmt"
 )
 

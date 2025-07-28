@@ -2,7 +2,7 @@ package routers
 
 import (
 	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/middleware"
+	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
 )
@@ -15,7 +15,7 @@ func Run() {
 	//静态路由,资源映射
 	r.Static("uploads", "./uploads")
 	g := r.Group("honeypot_server")
-	g.Use(middleware.LogMiddleware, middleware.AuthMiddleware) //需要放行的使用白名单机制
+	g.Use(middleware2.LogMiddleware, middleware2.AuthMiddleware) //需要放行的使用白名单机制
 
 	CaptchaRouter(g)
 	UserRouter(g)

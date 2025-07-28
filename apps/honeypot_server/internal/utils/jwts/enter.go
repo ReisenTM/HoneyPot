@@ -3,7 +3,7 @@ package jwts
 import (
 	"Honeypot/apps/honeypot_server/internal/enum"
 	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/models"
+	"Honeypot/apps/honeypot_server/internal/models"
 	"errors"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"

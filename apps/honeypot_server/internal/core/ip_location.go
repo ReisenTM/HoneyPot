@@ -1,7 +1,7 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/utils/ip"
+	"Honeypot/apps/honeypot_server/internal/utils/ip"
 	_ "embed"
 	"fmt"
 	"github.com/lionsoul2014/ip2region/binding/golang/xdb"

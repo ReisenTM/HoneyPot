@@ -3,7 +3,7 @@ package log_service
 import (
 	"Honeypot/apps/honeypot_server/internal/core"
 	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/models"
+	"Honeypot/apps/honeypot_server/internal/models"
 	"github.com/gin-gonic/gin"
 )
 

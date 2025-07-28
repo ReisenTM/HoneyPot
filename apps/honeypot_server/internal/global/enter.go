@@ -1,7 +1,7 @@
 package global
 
 import (
-	"Honeypot/apps/honeypot_server/config"
+	"Honeypot/apps/honeypot_server/internal/config"
 	"github.com/redis/go-redis/v9"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
