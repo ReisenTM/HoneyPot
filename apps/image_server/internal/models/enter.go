@@ -19,7 +19,7 @@ type PageInfo struct {
 }
 
 type IDListRequest struct {
-	IdList []uint `json:"idList"`
+	IdList []uint `json:"id_list"`
 }
 
 type IDRequest struct {

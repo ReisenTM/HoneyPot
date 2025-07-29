@@ -9,6 +9,7 @@ type Config struct {
 	System    System   `yaml:"system"`
 	Jwt       Jwt      `yaml:"jwt"`
 	WhiteList []string `yaml:"whiteList"`
+	VsNet     VsNet    `yaml:"vsNet"`
 	//MQ        MQ       `yaml:"mq"`
 }
 
@@ -59,35 +60,8 @@ type Jwt struct {
 	Issuer  string `yaml:"issuer"`
 	Secret  string `yaml:"secret"`
 }
-
-//
-//type MQ struct {
-//	User                 string `yaml:"user"`
-//	Password             string `yaml:"password"`
-//	Host                 string `yaml:"host"`
-//	Port                 int    `yaml:"port"`
-//	CreateIpExchangeName string `yaml:"createIpExchangeName"`
-//	DeleteIpExchangeName string `yaml:"deleteIpExchangeName"`
-//	BindPortExchangeName string `yaml:"bindPortExchangeName"`
-//	Ssl                  bool   `yaml:"ssl"`
-//	ClientCertificate    string `yaml:"clientCertificate"`
-//	ClientKey            string `yaml:"clientKey"`
-//	CaCertificate        string `yaml:"caCertificate"`
-//}
-//
-//func (m MQ) Addr() string {
-//	if m.Ssl {
-//		return fmt.Sprintf("amqps://%s:%s@%s:%d/",
-//			m.User,
-//			m.Password,
-//			m.Host,
-//			m.Port,
-//		)
-//	}
-//	return fmt.Sprintf("amqp://%s:%s@%s:%d/",
-//		m.User,
-//		m.Password,
-//		m.Host,
-//		m.Port,
-//	)
-//}
+type VsNet struct {
+	Name   string `yaml:"name" json:"name"`
+	Prefix string `yaml:"prefix" json:"prefix"`
+	Net    string `yaml:"net" json:"net"`
+}

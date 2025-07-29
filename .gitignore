@@ -2,5 +2,5 @@
 settings_dev.yaml
 logs
 *.exe
-uploads/*
+uploads
 testWorkspace

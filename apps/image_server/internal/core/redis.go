@@ -25,13 +25,13 @@ func InitRedis() (client *redis.Client) {
 	return rdb
 }
 
-var client *redis.Client
+var redisClient *redis.Client
 var onceRedis sync.Once
 
 // GetRedis 获得redis单例
 func GetRedis() *redis.Client {
 	onceRedis.Do(func() {
-		client = InitRedis()
+		redisClient = InitRedis()
 	})
-	return client
+	return redisClient
 }

@@ -28,15 +28,7 @@ whiteList:
   - /honeypot_server/captcha
   - /honeypot_server/site
   - /honeypot_server/register
-#mq:
-#  user: admin
-#  password: password
-#  host: 10.3.0.8
-#  port: 5672
-#  createIpExchangeName: createIpExchange
-#  deleteIpExchangeName: deleteIpExchangeName
-#  bindPortExchangeName: bindPortExchangeName
-#  ssl: false
-#  clientCertificate: # 客户端的证书
-#  clientKey:  # 客户端的私钥
-#  caCertificate:  # ca的证书
+vsNet:
+  name: honeypot-hp
+  prefix: hp-
+  net: 10.2.1.0/24

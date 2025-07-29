@@ -16,8 +16,10 @@ func Run() {
 	//r.Static("uploads", "./uploads")
 	g := r.Group("image_server")
 	g.Use(middleware2.LogMiddleware, middleware2.AuthMiddleware) //需要放行的使用白名单机制
-
+	//镜像云
 	ImageCloudRouter(g)
+	//虚拟服务
+	VsRouter(g)
 
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)
