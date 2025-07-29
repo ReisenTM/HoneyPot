@@ -9,7 +9,7 @@ import (
 type Api struct {
 	ImageCloudApi image_cloud_api.ImageCloudApi
 	VsApi         vs_api.VsApi
-	VNet          vnet_api.VNetApi
+	VNetApi       vnet_api.VNetApi
 }
 
 var App = new(Api)

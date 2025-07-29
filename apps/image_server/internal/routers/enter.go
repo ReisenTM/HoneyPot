@@ -20,6 +20,8 @@ func Run() {
 	ImageCloudRouter(g)
 	//虚拟服务
 	VsRouter(g)
+	//虚拟网络
+	VNetRouter(g)
 
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)
