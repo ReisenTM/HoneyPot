@@ -1,10 +1,10 @@
 package middleware
 
 import (
-	"Honeypot/apps/image_server/internal/global"
 	"github.com/gin-gonic/gin"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
 )
 
 func LogMiddleware(c *gin.Context) {

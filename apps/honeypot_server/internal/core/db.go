@@ -1,10 +1,10 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/internal/global"
 	"github.com/sirupsen/logrus"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
+	"honeypot_server/internal/global"
 	"sync"
 	"time"
 )

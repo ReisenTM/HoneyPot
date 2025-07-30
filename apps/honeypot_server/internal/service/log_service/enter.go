@@ -1,10 +1,10 @@
 package log_service
 
 import (
-	"Honeypot/apps/honeypot_server/internal/core"
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/models"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/core"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/models"
 )
 
 type LoginLogService struct {

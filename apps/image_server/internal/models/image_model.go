@@ -1,10 +1,10 @@
 package models
 
 import (
-	"Honeypot/apps/image_server/internal/utils/cmd"
 	"fmt"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
+	"image_server/internal/utils/cmd"
 	"os"
 )
 

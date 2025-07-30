@@ -1,9 +1,9 @@
 package api
 
 import (
-	"Honeypot/apps/honeypot_server/internal/api/captcha_api"
-	"Honeypot/apps/honeypot_server/internal/api/log_api"
-	"Honeypot/apps/honeypot_server/internal/api/user_api"
+	"honeypot_server/internal/api/captcha_api"
+	"honeypot_server/internal/api/log_api"
+	"honeypot_server/internal/api/user_api"
 )
 
 type Api struct {

@@ -1,11 +1,11 @@
 package core
 
 import (
-	"Honeypot/apps/image_server/internal/config"
-	"Honeypot/apps/image_server/internal/flags"
-	"Honeypot/apps/image_server/internal/global"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
+	"image_server/internal/config"
+	"image_server/internal/flags"
+	"image_server/internal/global"
 	"os"
 )
 

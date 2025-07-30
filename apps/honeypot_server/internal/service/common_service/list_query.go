@@ -1,10 +1,10 @@
 package common_service
 
 import (
-	"Honeypot/apps/honeypot_server/internal/core"
-	"Honeypot/apps/honeypot_server/internal/models"
 	"fmt"
 	"gorm.io/gorm"
+	"honeypot_server/internal/core"
+	"honeypot_server/internal/models"
 )
 
 type ListQueryOption struct {

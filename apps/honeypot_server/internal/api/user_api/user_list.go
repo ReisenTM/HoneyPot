@@ -1,11 +1,11 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/internal/middleware"
-	models2 "Honeypot/apps/honeypot_server/internal/models"
-	"Honeypot/apps/honeypot_server/internal/service/common_service"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/middleware"
+	models2 "honeypot_server/internal/models"
+	"honeypot_server/internal/service/common_service"
+	"honeypot_server/internal/utils/resp"
 )
 
 type UserListRequest struct {

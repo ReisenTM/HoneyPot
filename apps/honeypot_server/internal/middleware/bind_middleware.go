@@ -1,8 +1,8 @@
 package middleware
 
 import (
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/utils/resp"
 )
 
 func BindJsonMiddleware[T any](c *gin.Context) {

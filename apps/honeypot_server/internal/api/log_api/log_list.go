@@ -1,12 +1,12 @@
 package log_api
 
 import (
-	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
-	models2 "Honeypot/apps/honeypot_server/internal/models"
-	common_service2 "Honeypot/apps/honeypot_server/internal/service/common_service"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	middleware2 "honeypot_server/internal/middleware"
+	models2 "honeypot_server/internal/models"
+	common_service2 "honeypot_server/internal/service/common_service"
+	"honeypot_server/internal/utils/resp"
 )
 
 type LogListRequest struct {

@@ -1,10 +1,10 @@
 package vnet_service
 
 import (
-	"Honeypot/apps/image_server/internal/global"
 	"context"
 	"github.com/docker/docker/api/types/network"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
 )
 
 func Run() {

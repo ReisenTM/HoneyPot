@@ -2,12 +2,12 @@
 package middleware
 
 import (
-	"Honeypot/apps/image_server/internal/enum"
-	"Honeypot/apps/image_server/internal/global"
-	"Honeypot/apps/image_server/internal/utils/jwts"
-	"Honeypot/apps/image_server/internal/utils/resp"
-	"Honeypot/apps/image_server/internal/utils/white_list"
 	"github.com/gin-gonic/gin"
+	"image_server/internal/enum"
+	"image_server/internal/global"
+	"image_server/internal/utils/jwts"
+	"image_server/internal/utils/resp"
+	"image_server/internal/utils/white_list"
 )
 
 // AuthMiddleware 权限验证

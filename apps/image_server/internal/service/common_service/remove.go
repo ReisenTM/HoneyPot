@@ -1,9 +1,9 @@
 package common_service
 
 import (
-	"Honeypot/apps/image_server/internal/global"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
+	"image_server/internal/global"
 )
 
 type RemoveOption struct {

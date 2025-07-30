@@ -1,12 +1,12 @@
 package user_api
 
 import (
-	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
-	"Honeypot/apps/honeypot_server/internal/models"
-	"Honeypot/apps/honeypot_server/internal/service/common_service"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	middleware2 "honeypot_server/internal/middleware"
+	"honeypot_server/internal/models"
+	"honeypot_server/internal/service/common_service"
+	"honeypot_server/internal/utils/resp"
 )
 
 type UserRemoveRequest struct {

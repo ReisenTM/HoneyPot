@@ -1,8 +1,8 @@
 package resp
 
 import (
-	"Honeypot/apps/honeypot_server/internal/utils/validate"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/utils/validate"
 	"net/http"
 )
 

@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"Honeypot/apps/honeypot_server/internal/api"
-	"Honeypot/apps/honeypot_server/internal/api/log_api"
-	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/api"
+	"honeypot_server/internal/api/log_api"
+	middleware2 "honeypot_server/internal/middleware"
 )
 
 func LogRouter(r *gin.RouterGroup) {

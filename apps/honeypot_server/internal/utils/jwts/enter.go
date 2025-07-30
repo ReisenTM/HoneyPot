@@ -1,12 +1,12 @@
 package jwts
 
 import (
-	"Honeypot/apps/honeypot_server/internal/enum"
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/models"
 	"errors"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/enum"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/models"
 	"strings"
 	"time"
 )

@@ -1,11 +1,11 @@
 package api
 
 import (
-	"Honeypot/apps/image_server/internal/api/host_template_api"
-	"Honeypot/apps/image_server/internal/api/image_cloud_api"
-	"Honeypot/apps/image_server/internal/api/matrix_template_api"
-	"Honeypot/apps/image_server/internal/api/vnet_api"
-	"Honeypot/apps/image_server/internal/api/vs_api"
+	"image_server/internal/api/host_template_api"
+	"image_server/internal/api/image_cloud_api"
+	"image_server/internal/api/matrix_template_api"
+	"image_server/internal/api/vnet_api"
+	"image_server/internal/api/vs_api"
 )
 
 type Api struct {

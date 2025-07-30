@@ -1,11 +1,11 @@
 package main
 
 import (
-	core "Honeypot/apps/image_server/internal/core"
-	"Honeypot/apps/image_server/internal/flags"
-	"Honeypot/apps/image_server/internal/global"
-	"Honeypot/apps/image_server/internal/routers"
-	"Honeypot/apps/image_server/internal/service/vnet_service"
+	core "image_server/internal/core"
+	"image_server/internal/flags"
+	"image_server/internal/global"
+	"image_server/internal/routers"
+	"image_server/internal/service/vnet_service"
 )
 
 func main() {

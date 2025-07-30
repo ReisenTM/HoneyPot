@@ -1,11 +1,11 @@
 package models
 
 import (
-	"Honeypot/apps/image_server/internal/utils/cmd"
 	"errors"
 	"fmt"
 	"github.com/sirupsen/logrus"
 	"gorm.io/gorm"
+	"image_server/internal/utils/cmd"
 )
 
 //服务

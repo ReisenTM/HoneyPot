@@ -1,9 +1,9 @@
 package user_api
 
 import (
-	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
+	middleware2 "honeypot_server/internal/middleware"
+	"honeypot_server/internal/utils/resp"
 	"time"
 )
 

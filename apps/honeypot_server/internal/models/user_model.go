@@ -1,7 +1,7 @@
 package models
 
 import (
-	"Honeypot/apps/honeypot_server/internal/enum"
+	"honeypot_server/internal/enum"
 )
 
 //用户

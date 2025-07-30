@@ -1,11 +1,11 @@
 package vs_api
 
 import (
-	"Honeypot/apps/image_server/internal/middleware"
-	"Honeypot/apps/image_server/internal/models"
-	"Honeypot/apps/image_server/internal/service/common_service"
-	"Honeypot/apps/image_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
+	"image_server/internal/middleware"
+	"image_server/internal/models"
+	"image_server/internal/service/common_service"
+	"image_server/internal/utils/resp"
 )
 
 type VsListRequest struct {

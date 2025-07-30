@@ -1,16 +1,16 @@
 package vnet_api
 
 import (
-	"Honeypot/apps/image_server/internal/config"
-	"Honeypot/apps/image_server/internal/core"
-	"Honeypot/apps/image_server/internal/global"
-	"Honeypot/apps/image_server/internal/middleware"
-	"Honeypot/apps/image_server/internal/models"
-	"Honeypot/apps/image_server/internal/utils/cmd"
-	"Honeypot/apps/image_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/config"
+	"image_server/internal/core"
+	"image_server/internal/global"
+	"image_server/internal/middleware"
+	"image_server/internal/models"
+	"image_server/internal/utils/cmd"
+	"image_server/internal/utils/resp"
 )
 
 type VNetApi struct {

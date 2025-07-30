@@ -1,9 +1,9 @@
 package flags
 
 import (
-	"Honeypot/apps/honeypot_server/internal/global"
-	models2 "Honeypot/apps/honeypot_server/internal/models"
 	"github.com/sirupsen/logrus"
+	"honeypot_server/internal/global"
+	models2 "honeypot_server/internal/models"
 )
 
 // Migrate 数据库迁移

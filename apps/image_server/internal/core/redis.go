@@ -1,10 +1,10 @@
 package core
 
 import (
-	"Honeypot/apps/image_server/internal/global"
 	"context"
 	"github.com/redis/go-redis/v9"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
 	"sync"
 )
 

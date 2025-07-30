@@ -1,10 +1,10 @@
 package core
 
 import (
-	"Honeypot/apps/honeypot_server/internal/global"
 	"bytes"
 	"fmt"
 	"github.com/sirupsen/logrus"
+	"honeypot_server/internal/global"
 	"os"
 	"path"
 	"sync"

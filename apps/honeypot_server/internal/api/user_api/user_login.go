@@ -1,16 +1,16 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/middleware"
-	"Honeypot/apps/honeypot_server/internal/models"
-	"Honeypot/apps/honeypot_server/internal/service/log_service"
-	"Honeypot/apps/honeypot_server/internal/utils/captcha"
-	"Honeypot/apps/honeypot_server/internal/utils/jwts"
-	"Honeypot/apps/honeypot_server/internal/utils/pwd"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/middleware"
+	"honeypot_server/internal/models"
+	"honeypot_server/internal/service/log_service"
+	"honeypot_server/internal/utils/captcha"
+	"honeypot_server/internal/utils/jwts"
+	"honeypot_server/internal/utils/pwd"
+	"honeypot_server/internal/utils/resp"
 	"time"
 )
 

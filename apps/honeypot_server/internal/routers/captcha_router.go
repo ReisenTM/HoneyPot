@@ -1,8 +1,8 @@
 package routers
 
 import (
-	"Honeypot/apps/honeypot_server/internal/api"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/api"
 )
 
 func CaptchaRouter(r *gin.RouterGroup) {

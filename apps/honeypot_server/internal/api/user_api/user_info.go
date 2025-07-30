@@ -1,12 +1,12 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/internal/enum"
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/middleware"
-	"Honeypot/apps/honeypot_server/internal/models"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/enum"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/middleware"
+	"honeypot_server/internal/models"
+	"honeypot_server/internal/utils/resp"
 )
 
 type UserInfoResponse struct {

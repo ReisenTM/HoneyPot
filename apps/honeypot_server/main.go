@@ -1,10 +1,16 @@
 package main
 
 import (
-	core2 "Honeypot/apps/honeypot_server/internal/core"
-	"Honeypot/apps/honeypot_server/internal/flags"
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/routers"
+	core2 "honeypot_server/internal/core"
+	"honeypot_server/internal/flags"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/routers"
+)
+
+var (
+	Version   = "v1.0.1"
+	Commit    = " 7805a04452"
+	BuildTime = "Wed Jul 30 14:48:19 2025 "
 )
 
 func main() {

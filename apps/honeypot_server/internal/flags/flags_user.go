@@ -1,13 +1,13 @@
 package flags
 
 import (
-	"Honeypot/apps/honeypot_server/internal/global"
-	"Honeypot/apps/honeypot_server/internal/models"
-	user_service2 "Honeypot/apps/honeypot_server/internal/service/user_service"
 	"encoding/json"
 	"fmt"
 	"github.com/sirupsen/logrus"
 	"golang.org/x/crypto/ssh/terminal"
+	"honeypot_server/internal/global"
+	"honeypot_server/internal/models"
+	user_service2 "honeypot_server/internal/service/user_service"
 	"os"
 )
 

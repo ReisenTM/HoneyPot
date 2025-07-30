@@ -1,11 +1,11 @@
 package image_cloud_api
 
 import (
-	"Honeypot/apps/image_server/internal/utils/docker"
-	"Honeypot/apps/image_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/utils/docker"
+	"image_server/internal/utils/resp"
 	"os"
 	"path/filepath"
 	"time"

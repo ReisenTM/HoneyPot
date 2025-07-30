@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"Honeypot/apps/image_server/internal/global"
-	middleware2 "Honeypot/apps/image_server/internal/middleware"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
+	middleware2 "image_server/internal/middleware"
 )
 
 func Run() {

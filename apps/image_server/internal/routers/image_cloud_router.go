@@ -1,11 +1,11 @@
 package routers
 
 import (
-	"Honeypot/apps/image_server/internal/api"
-	"Honeypot/apps/image_server/internal/api/image_cloud_api"
-	"Honeypot/apps/image_server/internal/middleware"
-	"Honeypot/apps/image_server/internal/models"
 	"github.com/gin-gonic/gin"
+	"image_server/internal/api"
+	"image_server/internal/api/image_cloud_api"
+	"image_server/internal/middleware"
+	"image_server/internal/models"
 )
 
 func ImageCloudRouter(r *gin.RouterGroup) {

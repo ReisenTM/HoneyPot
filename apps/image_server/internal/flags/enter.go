@@ -1,10 +1,10 @@
 package flags
 
 import (
-	"Honeypot/apps/image_server/internal/global"
 	"flag"
 	"fmt"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
 	"os"
 )
 

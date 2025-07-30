@@ -2,5 +2,9 @@
 settings_dev.yaml
 logs
 *.exe
-uploads
-testWorkspace
+/apps/image_server/uploads/
+/apps/image_server/logs/
+/apps/image_server/testWorkspace/
+/apps/honeypot_server/testWorkspace/
+/apps/honeypot_server/logs/
+/apps/honeypot_server/uploads/

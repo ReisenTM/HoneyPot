@@ -1,11 +1,11 @@
 package core
 
 import (
-	"Honeypot/apps/image_server/internal/utils/ip"
 	_ "embed"
 	"fmt"
 	"github.com/lionsoul2014/ip2region/binding/golang/xdb"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/utils/ip"
 	"strings"
 )
 

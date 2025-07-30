@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"Honeypot/apps/image_server/internal/api"
-	"Honeypot/apps/image_server/internal/api/vnet_api"
-	"Honeypot/apps/image_server/internal/middleware"
 	"github.com/gin-gonic/gin"
+	"image_server/internal/api"
+	"image_server/internal/api/vnet_api"
+	"image_server/internal/middleware"
 )
 
 func VNetRouter(r *gin.RouterGroup) {

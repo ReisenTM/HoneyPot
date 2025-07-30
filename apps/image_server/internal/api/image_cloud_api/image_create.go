@@ -1,15 +1,15 @@
 package image_cloud_api
 
 import (
-	"Honeypot/apps/image_server/internal/global"
-	"Honeypot/apps/image_server/internal/middleware"
-	"Honeypot/apps/image_server/internal/models"
-	"Honeypot/apps/image_server/internal/utils/path"
-	"Honeypot/apps/image_server/internal/utils/resp"
 	"errors"
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"
+	"image_server/internal/global"
+	"image_server/internal/middleware"
+	"image_server/internal/models"
+	"image_server/internal/utils/path"
+	"image_server/internal/utils/resp"
 	"os"
 	"os/exec"
 	"path/filepath"

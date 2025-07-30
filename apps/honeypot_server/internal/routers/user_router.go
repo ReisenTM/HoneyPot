@@ -1,10 +1,10 @@
 package routers
 
 import (
-	"Honeypot/apps/honeypot_server/internal/api"
-	user_api2 "Honeypot/apps/honeypot_server/internal/api/user_api"
-	"Honeypot/apps/honeypot_server/internal/middleware"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/api"
+	user_api2 "honeypot_server/internal/api/user_api"
+	"honeypot_server/internal/middleware"
 )
 
 func UserRouter(r *gin.RouterGroup) {

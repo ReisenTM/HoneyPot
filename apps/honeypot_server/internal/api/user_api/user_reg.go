@@ -1,12 +1,12 @@
 package user_api
 
 import (
-	"Honeypot/apps/honeypot_server/internal/enum"
-	middleware2 "Honeypot/apps/honeypot_server/internal/middleware"
-	user_service2 "Honeypot/apps/honeypot_server/internal/service/user_service"
-	"Honeypot/apps/honeypot_server/internal/utils/resp"
 	"fmt"
 	"github.com/gin-gonic/gin"
+	"honeypot_server/internal/enum"
+	middleware2 "honeypot_server/internal/middleware"
+	user_service2 "honeypot_server/internal/service/user_service"
+	"honeypot_server/internal/utils/resp"
 )
 
 type UserRegisterRequest struct {
