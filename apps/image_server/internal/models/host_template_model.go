@@ -5,7 +5,7 @@ package models
 type HostTemplateModel struct {
 	Model
 	Title    string               `gorm:"size:32" json:"title"`
-	PortList HostTemplatePortList `gorm:"serializer:json" json:"portList"`
+	PortList HostTemplatePortList `gorm:"serializer:json" json:"port_list"`
 }
 type HostTemplatePortList []HostTemplatePort
 type HostTemplatePort struct {

@@ -23,6 +23,10 @@ func Run() {
 	//虚拟网络
 	VNetRouter(g)
 
+	HostTemplateRouter(g)
+
+	MatrixTemplateRouter(g)
+
 	logrus.Infof("服务器监听于 %s\n", sysConf.WebAddr)
 	_ = r.Run(sysConf.WebAddr)
 }

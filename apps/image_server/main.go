@@ -5,6 +5,7 @@ import (
 	"Honeypot/apps/image_server/internal/flags"
 	"Honeypot/apps/image_server/internal/global"
 	"Honeypot/apps/image_server/internal/routers"
+	"Honeypot/apps/image_server/internal/service/vnet_service"
 )
 
 func main() {
@@ -16,5 +17,6 @@ func main() {
 	global.DockerClient = core.InitDocker()
 	global.Log = core.GetLogger()
 	flags.Run()
+	vnet_service.Run()
 	routers.Run()
 }
