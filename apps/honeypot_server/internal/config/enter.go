@@ -49,9 +49,9 @@ type Redis struct {
 }
 
 type System struct {
-	WebAddr string `yaml:"webAddr"`
-	//GrpcAddr string `yaml:"grpcAddr"`
-	Mode string `yaml:"mode"`
+	WebAddr  string `yaml:"webAddr"`
+	GrpcAddr string `yaml:"grpcAddr"`
+	Mode     string `yaml:"mode"`
 }
 
 type Jwt struct {

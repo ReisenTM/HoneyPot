@@ -1,0 +1,8 @@
+logger:
+    format: json
+    level: info
+    appName: honeypot_node
+system:
+    grpcManagerAddr: 192.168.1.107:8081
+    network: enp0s5
+    uid: 623ab547-b8fc-45e1-8f5d-885105ce3075

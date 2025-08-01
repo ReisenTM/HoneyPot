@@ -11,4 +11,5 @@ type NodeNetworkModel struct {
 	SubnetMask int8      `json:"subnet_mask"`       // 子网掩码 8-32
 	Gateway    string    `gorm:"32" json:"gateway"` //网关
 	Status     int8      `json:"status"`            // 是否启用 1 启用 2 未启用
+
 }

@@ -5,6 +5,7 @@ import (
 	"honeypot_server/internal/flags"
 	"honeypot_server/internal/global"
 	"honeypot_server/internal/routers"
+	"honeypot_server/internal/service/grpc_service"
 )
 
 var (
@@ -20,6 +21,7 @@ func main() {
 	global.DB = core2.GetDB()
 	global.Redis = core2.GetRedis()
 	global.Log = core2.GetLogger()
+	go grpc_service.Run()
 	flags.Run()
 	routers.Run()
 }
