@@ -5,13 +5,11 @@ import (
 	"fmt"
 	"github.com/google/uuid"
 	"github.com/sirupsen/logrus"
-	"google.golang.org/grpc"
-	"google.golang.org/grpc/credentials/insecure"
 	"honeypot_node/internal/core"
 	"honeypot_node/internal/global"
+	"honeypot_node/internal/rpc"
 	"honeypot_node/internal/rpc/node_rpc"
 	ip2 "honeypot_node/internal/utils/ip"
-	"log"
 	"os"
 )
 
@@ -23,10 +21,8 @@ func main() {
 	addr := global.Config.System.GrpcManagerAddr
 	// 使用 grpc.Dial 创建一个到指定地址的 gRPC 连接。
 	// 此处使用不安全的证书来实现 SSL/TLS 连接
-	conn, err := grpc.NewClient(addr, grpc.WithTransportCredentials(insecure.NewCredentials()))
-	if err != nil {
-		log.Fatalf(fmt.Sprintf("grpc connect addr [%s] 连接失败 %s", addr, err))
-	}
+
+	conn := rpc.GetConnWithTLS(addr)
 	defer conn.Close()
 	//初始化客户端
 	client := node_rpc.NewNodeServiceClient(conn)
